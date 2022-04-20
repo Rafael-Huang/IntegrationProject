@@ -1,3 +1,4 @@
+
 """
 Integration project by Rafael Huang.
 The project is a quiz regarding our class and general knowledge.
@@ -57,13 +58,11 @@ def main():
             print("\nIncorrect!")
 
         operator_2 = input("\nB) +: ")
-        if operator_2.lower() == "addition" or operator_2.lower() == "add":
+        if operator_2.lower() == "addition" or operator_2.lower() == "add" or \
+                operator_2.lower() == "plus" or operator_2.lower() == "sum":
 
             print("\nCorrect!")
 
-        if operator_2.lower() == "plus" or operator_2.lower() == "sum":
-
-            print("\nCorrect!")
             score += 0.25
         else:
             print("\nIncorrect!")
@@ -230,4 +229,3 @@ def main():
 
 
 main()
-
