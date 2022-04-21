@@ -1,4 +1,3 @@
-
 """
 Integration project by Rafael Huang.
 The project is a quiz regarding our class and general knowledge.
@@ -6,7 +5,7 @@ The project is a quiz regarding our class and general knowledge.
 __author__ = "Rafael Huang"
 # References: Course website, W3Schools, Paulo Drefahl, Henrique Baggio
 
-user_name = input("Please enter your name: ")
+user_name = input("Please enter your full name: ")
 print("\nWelcome", user_name + "! This is a short quiz to test your general"
                                " knowledge about Python. Good Luck!")
 
@@ -20,6 +19,10 @@ def main():
         score = 0  # defines user score
         valid_response = False
         print("\nINTEGRATION PROJECT QUIZ")
+        # this try and except function, it's to prevent the program to show an
+        # error, therefore, if the user type an invalid input,
+        # it will just restart the question until the user types
+        # a valid input.
         while not valid_response:
             try:
                 print("\nQuestion 1: ", sep='')  # \n will give a space between
@@ -206,6 +209,11 @@ def main():
                                  "score,you didn't pass.Try again!"
                   .format(score))
         valid_option = True
+        
+        # After the quiz is over and final score is shown, 
+        # some options will show for the user to choose, either to retake the  
+        # quiz, end the program, or show the answers for all the questions.
+        
         while valid_option:
             print("Select option: \n1) Play again \n2) Exit Game \n3) "
                   "Show Answers")
@@ -219,9 +227,9 @@ def main():
             elif choice == '3':
                 print("\n1)9.5 \n\n2)a)exponent or power\n  b)addition, "
                       "add, plus, or sum\n  c)division or divide\n  "
-                      "d)subtraction or minus  \n\n3)-3 \n\n4)C  \n\n5)122.0"
-                      "\n\n6)sharks\n\n7)0 = blue \n  2 = yellow \n  4 = green"
-                      "\n\n8)for loop or for")
+                      "d)subtraction or minus  \n\n3)-3 \n\n4)C \n\n5)122.0"
+                      "\n\n6)sharks \n\n7)0 = blue \n  2 = yellow "
+                      "\n  4 = green \n\n8)for loop or for")
                 valid_option = False
                 play_again = False
             else:
